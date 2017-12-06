@@ -305,7 +305,7 @@ void queryCommand() {
 }
 
 
-void loop() {
+void loop() {  
   if(Serial.available()){
     int readLen = Serial.readBytes(buff, Serial.available());
     switch (buff[0]) {
