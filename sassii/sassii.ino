@@ -104,6 +104,7 @@ void selectBus(){
 //functions relating to serial
 
 void error(){
+  delay(100);
   clearSerial();
   Serial.write('?');
   Serial.flush();
@@ -307,6 +308,7 @@ void queryCommand() {
 
 void loop() {  
   if(Serial.available()){
+    delay(20);
     int readLen = Serial.readBytes(buff, Serial.available());
     switch (buff[0]) {
       case 'Q':
